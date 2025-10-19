@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6 - Interactive TV Energy Visualizations</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="chart.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive TV Energy Analysis</h1>
+        <p class="subtitle">Exercise 6: Filtering & Tooltips with D3.js</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Interactive Data Exploration</h2>
+            <p>Explore TV energy consumption data through interactive visualizations. Use the filters below the histogram to view different screen technologies, and hover over the scatterplot points to see detailed information.</p>
+        </section>
+
+        <!-- Histogram Section -->
+        <section class="chart-section">
+            <div class="chart-header">
+                <h2>Energy Consumption Distribution</h2>
+                <p>Filter by screen technology to compare energy consumption patterns.</p>
+            </div>
+
+            <div id="filters-screen" class="filters"></div>
+
+            <div id="histogram-chart" class="chart-container"></div>
+        </section>
+
+        <!-- Scatterplot Section -->
+        <section class="chart-section">
+            <div class="chart-header">
+                <h2>Energy vs. Star Rating</h2>
+                <p>Hover over points to see screen size and other details. Color indicates screen technology.</p>
+            </div>
+
+            <div id="scatter-chart" class="chart-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nguyen Ngoc Anh (ID: 104977768) | Exercise 6 - Interactive Visualizations | Created with D3.js v7 | Code assistance by GenAI (Claude Code)</p>
+    </footer>
+
+    <!-- D3.js Library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Order matters! Load in this sequence: -->
+    <script src="shared-constants.js"></script>
+    <script src="histogram.js"></script>
+    <script src="scatterplot.js"></script>
+    <script src="interactions.js"></script>
+    <script src="load-data.js"></script>
+</body>
+</html>

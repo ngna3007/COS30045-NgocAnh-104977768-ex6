@@ -1,0 +1,94 @@
+/* Exercise 6 - Chart-Specific Styling */
+
+svg {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Axes */
+.axis text {
+    font-size: 12px;
+    fill: #333;
+}
+
+.axis line, .axis path {
+    stroke: #999;
+}
+
+.axis-label {
+    font-size: 14px;
+    fill: #666;
+    font-weight: 600;
+}
+
+/* Histogram Bars */
+.histogram-bar {
+    fill: #667eea;
+    stroke: white;
+    stroke-width: 1;
+    transition: all 0.3s;
+}
+
+.histogram-bar:hover {
+    fill: #764ba2;
+    cursor: pointer;
+}
+
+/* Scatterplot Circles */
+.scatter-circle {
+    stroke: white;
+    stroke-width: 1;
+    opacity: 0.7;
+    transition: all 0.2s;
+}
+
+.scatter-circle:hover {
+    opacity: 1;
+    stroke-width: 2;
+    r: 6;
+}
+
+/* Tooltip */
+.tooltip {
+    pointer-events: none;
+}
+
+.tooltip-rect {
+    fill: rgba(255, 255, 255, 0.95);
+    stroke: #667eea;
+    stroke-width: 2;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.tooltip-text {
+    fill: #333;
+    font-size: 13px;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+/* Legend */
+.legend-item {
+    font-size: 13px;
+}
+
+.legend-rect {
+    stroke: #999;
+    stroke-width: 1;
+}
+
+/* Chart Title */
+.chart-title {
+    font-size: 16px;
+    font-weight: bold;
+    fill: #333;
+    text-anchor: middle;
+}
+
+/* Loading Message */
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-style: italic;
+}
