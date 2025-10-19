@@ -25,7 +25,7 @@ function drawScatterplot(data) {
         .range([0, widthS]);
 
     yScaleS = d3.scaleLinear()
-        .domain([0, d3.max(sampledData, d => d.star2) + 1])
+        .domain([0, d3.max(sampledData, d => d.star) + 1])
         .range([heightS, 0]);
 
     // Configure color scale with actual data
@@ -66,7 +66,7 @@ function drawScatterplot(data) {
         .join("circle")
         .attr("class", "scatter-circle")
         .attr("cx", d => xScaleS(d.energyConsumption))
-        .attr("cy", d => yScaleS(d.star2))
+        .attr("cy", d => yScaleS(d.star))
         .attr("r", 4)
         .attr("fill", d => colorScale(d.screenTech));
 

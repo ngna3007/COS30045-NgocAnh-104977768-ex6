@@ -5,7 +5,7 @@ d3.csv("data/Ex6_TVdata.csv").then(data => {
     // Convert strings to numbers and clean data
     data.forEach(d => {
         d.energyConsumption = +d.energyConsumption;
-        d.star2 = +d.star2;
+        d.star = +d.star;
         d.screenSize = +d.screenSize;
         d.brand = d.brand || "Unknown";
         d.model = d.model || "Unknown";
@@ -15,7 +15,7 @@ d3.csv("data/Ex6_TVdata.csv").then(data => {
     // Filter out invalid data
     data = data.filter(d =>
         !isNaN(d.energyConsumption) &&
-        !isNaN(d.star2) &&
+        !isNaN(d.star) &&
         d.energyConsumption > 0 &&
         d.energyConsumption < 1000  // Remove outliers
     );
